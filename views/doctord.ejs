@@ -1,0 +1,9 @@
+<% include partials/header %>
+  <h1>HELLO from doctorD EJS</h1>
+  <h3><%= name %></h3>
+  <ul>
+    <% users.forEach((user) => { %>
+      <li><%= user.name %><%= user.age %></li>
+    <% }) %>
+  </ul>
+<% include partials/footer %>
