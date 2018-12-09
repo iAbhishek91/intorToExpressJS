@@ -22,14 +22,16 @@ app.set('view engine','ejs');
 app.set('views',path.join(__dirname, 'views'));
 
 // middleware
-// first middleware
+// first user defined middleware
 var logger = (req, res, next) => {
   console.log('Logging...');
-  next();
-}
-// body parser middleware
+  next(); // chaining middlewares
+};
+
+// third party middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
 // express built in middleware
 // by default loads index.html
 app.use(express.static(path.join(__dirname, 'public', 'html'))); 
