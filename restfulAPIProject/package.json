@@ -1,0 +1,24 @@
+{
+  "name": "restful-api-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && babel src -d dist",
+    "start:server": "nodemon dist/server/server.js",
+    "start": "npm run build && npm run start:server"
+  },
+  "keywords": [],
+  "author": "Abhishek Das",
+  "license": "none",
+  "dependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "body-parser": "^1.18.3",
+    "config": "^3.0.1",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.18.10"
+  }
+}
