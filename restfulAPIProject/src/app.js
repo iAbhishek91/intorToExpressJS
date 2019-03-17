@@ -1,8 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import userRouter from './api/route/users';
-import logger from './middleware/logger';
-import crossOriginErrorHandler from './middleware/crossOriginErrorHandler';
+import logger from './api/middleware/logger';
+import crossOriginErrorHandler from './api/middleware/crossOriginErrorHandler';
 
 const app = express();
 
